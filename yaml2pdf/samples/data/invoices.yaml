@@ -1,0 +1,12 @@
+number: R20-0001
+filename: R20-0001.pdf    
+date: 18/12/2020
+currency: €
+customer:
+  name: Xavier Duran
+  nif: 12345678Z
+items:
+  - item:
+    description: Quota de manteniment desembre 2020
+    amount: 100,00
+amount: 100,00

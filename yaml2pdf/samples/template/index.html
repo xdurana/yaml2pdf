@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="invoice-box">
+            <table>
+                <tr class="top">
+                    <td>
+                        <img src="images/logo.png" style="max-width:200px;">
+                    </td>
+                    <td>
+                        Can Carner Cooperativa d'Habitatge, SCCL<br>
+                        CIF: F67277400<br>                                    
+                        <br/>
+                        Masia de Can Carner<br>
+                        C/ Can Carner S/N<br>
+                        08211 Castellar del Vallès<br/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="invoice-box">
+            <table>
+                <tr class="information">
+                    <td colspan="2">
+                        Rebut justificant d'ingrés
+                        <br/>
+                        <br/>
+                    </td>
+                </tr>
+                <tr class="heading">
+                    <td>
+                      Rebut #
+                    </td>
+                    <td>
+                      Data
+                    </td>
+                </tr>
+                <tr class="details">
+                    <td>
+                        {{number}}
+                    </td>
+                    <td>
+                        {{date}}
+                    </td>        
+                </tr>
+                <tr class="heading">
+                    <td>
+                      Dades de la persona o entitat creditora
+                    </td>
+                    <td>
+                      NIF/CIF
+                    </td>
+                </tr>
+                <tr class="details">
+                    <td>
+                        {{customer.name}}
+                    </td>
+                    <td>
+                        {{customer.nif}}
+                    </td>        
+                </tr>
+                <tr class="heading">
+                    <td>
+                        Concepte
+                    </td>
+                    <td>
+                        Import
+                    </td>
+                </tr>
+                {{#items}}
+                <tr class="item">
+                    <td>{{description}}</td>
+                    <td>{{amount}}{{@root.currency}}</td>
+                </tr>
+                {{/items}}
+                <tr class="total">
+                    <td>Total</td>                
+                    <td>
+                      {{amount}}{{@root.currency}}
+                    </td>
+                </tr>
+            </table>
+            <div class="footer">Can Carner Cooperativa d'Habitatge, SCCL | <a href="https://cancarner.coop">https://cancarner.coop</a> | <a href="mailto:economica@cancarner.coop">economica@cancarner.coop</a></div>
+        </div>
+    </body>
+</html>
