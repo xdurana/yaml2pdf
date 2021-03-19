@@ -21,6 +21,7 @@ def from_yaml(template, yaml_file, output_dir):
 @ciit.command()
 @click.option("--template", type=str)
 @click.option("--directory", type=click.Path(exists=True))
+@click.option("--output-dir", type=click.Path(exists=True))
 def from_directory(template, directory, output_dir):
     make_document_from_directory(template, directory, output_dir)
 
