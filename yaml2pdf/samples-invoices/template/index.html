@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="invoice-box">
+            <table>
+                <tr class="top">
+                    <td>
+                        <img src="images/logo.png" style="max-width:200px;">
+                    </td>
+                    <td>
+                        Can Carner Cooperativa d'Habitatge, SCCL<br>
+                        CIF: F67277400<br>                                    
+                        <br/>
+                        Masia de Can Carner<br>
+                        C/ Can Carner S/N<br>
+                        08211 Castellar del Vallès<br/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="invoice-box">
+            <table>
+                <tr class="information">
+                    <td colspan="2">
+                        Factura
+                        <br/>
+                        <br/>
+                    </td>
+                </tr>
+                <tr class="heading">
+                    <td>
+                      Factura #
+                    </td>
+                    <td>
+                      Data
+                    </td>
+                    <td>
+                      Data de venciment
+                    </td>
+                </tr>
+                <tr class="details">
+                    <td>
+                        {{number}}
+                    </td>
+                    <td>
+                        {{date}}
+                    </td>        
+                    <td>
+                        {{due-date}}
+                    </td>        
+                </tr>
+              </table>
+            </div>
+            <div class="invoice-box">
+                <table>
+                  <tr class="heading">
+                    <td>
+                      Dades de la persona o entitat client
+                    </td>
+                </tr>
+                <tr class="details-short">
+                    <td>
+                        {{customer.name}}
+                    </td>        
+                </tr>
+                <tr class="details-short">
+                    <td>
+                        {{customer.address}}
+                    </td>        
+                </tr>
+                <tr class="details-short">
+                    <td>
+                        {{customer.postal-code}} {{customer.city}}, {{customer.province}}
+                    </td>        
+                </tr>
+                <tr class="details-short">
+                    <td>
+                        NIF/CIF: {{customer.nif}}
+                    </td>        
+                </tr>
+            </table>
+          </div>
+          <div class="invoice-box">
+              <table>
+                <tr class="heading">
+                    <td>
+                        Concepte
+                    </td>
+                    <td>
+                        Import
+                    </td>
+                </tr>
+                <tr class="item">
+                    <td>{{item.description}}</td>
+                    <td>{{item.base-amount}}{{currency}}</td>
+                </tr>
+                <tr class="item">
+                    <td>IVA {{item.iva-percent}}</td>
+                    <td>{{item.iva-amount}}{{currency}}</td>
+                </tr>
+                <tr class="item">
+                    <td>IRPF {{item.irpf-percent}}</td>
+                    <td>{{item.irpf-amount}}{{currency}}</td>
+                </tr>
+                <tr class="total">
+                    <td>TOTAL</td>
+                    <td>{{item.total}}{{currency}}</td>
+                </tr>
+            </table>
+        </div> 
+        <div class="invoice-box">
+          <table>
+            <tr class="heading">
+              <td>
+                  Forma de pagament
+              </td>
+              <td>
+                  IBAN
+              </td>
+            </tr>
+            <tr class="item">
+              <td>Transferència bancària</td>
+              <td>ES21 0081 0052 0100 0245 3250</td>
+            </tr>
+          </table>
+        </div>
+        <div class="footer">Can Carner Cooperativa d'Habitatge, SCCL | <a href="https://cancarner.coop">https://cancarner.coop</a> | <a href="mailto:economica@cancarner.coop">economica@cancarner.coop</a></div>
+    </body>
+</html>
