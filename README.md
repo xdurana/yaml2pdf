@@ -9,23 +9,23 @@ Simple PDF generator from HTML templates and YAML data files
 Generate a single PDF from a YAML file
 
 ```bash
-$ .venv/bin/python yaml2pdf.py  from-yaml --template [FILE] --yaml-file [FILE]
+$ .venv/bin/python yaml2pdf.py  from-yaml --template [FILE] --yaml-file [FILE] --output-dir [OUTPUT]
 ```
 
 Generate one PDF from every YAML file on the given directory
 
 ```bash
-$ .venv/bin/python yaml2pdf.py  from-directory --template [FILE] --directory [DIRECTORY]
+$ .venv/bin/python yaml2pdf.py  from-directory --template [FILE] --directory [DIRECTORY] --output-dir [OUTPUT]
 ```
 
 ## Example
 
 ```bash
-$ .venv/bin/python yaml2pdf.py from-yaml --template yaml2pdf/samples/template/index.html --yaml-file yaml2pdf/samples/data/F21-00009.yaml
+$ .venv/bin/python yaml2pdf.py from-yaml --template yaml2pdf/samples/template/index.html --yaml-file yaml2pdf/samples/data/F21-00009.yaml --output-dir output
 ```
 
 ```bash
-$ .venv/bin/python yaml2pdf.py from-directory --template yaml2pdf/samples/template/index.html --directory yaml2pdf/samples/data
+$ .venv/bin/python yaml2pdf.py from-directory --template yaml2pdf/samples/template/index.html --directory yaml2pdf/samples/data --output-dir output
 ```
 
 ## Create virtual environment
