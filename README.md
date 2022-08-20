@@ -1,21 +1,27 @@
 # yaml2pdf
 
-Simple PDF generator from HTML templates and YAML data files
+Simple `PDF` generator from `HTML` templates and `YAML` data files
 
 ![Python application](https://github.com/xdurana/yaml2pdf/workflows/Python%20application/badge.svg)
 
 ## Synopsis
 
-Generate a single PDF from a YAML file
+Generate a single `PDF` from a `YAML` file
 
 ```bash
-python3 -m yaml2pdf from-yaml --template [FILE] --yaml-file [FILE] --output-dir [OUTPUT]
+python3 -m yaml2pdf from-yaml \
+  --template [FILE] \
+  --yaml-file [FILE] \
+  --output-dir [OUTPUT]
 ```
 
-Generate one PDF from every YAML file in the given directory
+Generate one `PDF` from every `YAML` file in the given directory
 
 ```bash
-python3 -m yaml2pdf from-directory --template [FILE] --directory [DIRECTORY] --output-dir [OUTPUT]
+python3 -m yaml2pdf from-directory \
+  --template [FILE] \
+  --directory [DIRECTORY] \
+  --output-dir [OUTPUT]
 ```
 
 ## Example
@@ -34,15 +40,10 @@ python3 -m yaml2pdf from-directory \
   --output-dir output
 ```
 
-## Create a virtual environment
+## Installation
 
 ```bash
 python3 -m venv .venv
-.venv/bin/python3 setup.py install
-```
-
-## Run tests
-
-```bash
-python3 -m tests.test_make
+source .venv/bin/activate
+python3 setup.py install
 ```
