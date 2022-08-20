@@ -9,34 +9,40 @@ Simple PDF generator from HTML templates and YAML data files
 Generate a single PDF from a YAML file
 
 ```bash
-$ .venv/bin/python yaml2pdf.py  from-yaml --template [FILE] --yaml-file [FILE] --output-dir [OUTPUT]
+python3 -m yaml2pdf from-yaml --template [FILE] --yaml-file [FILE] --output-dir [OUTPUT]
 ```
 
-Generate one PDF from every YAML file on the given directory
+Generate one PDF from every YAML file in the given directory
 
 ```bash
-$ .venv/bin/python yaml2pdf.py  from-directory --template [FILE] --directory [DIRECTORY] --output-dir [OUTPUT]
+python3 -m yaml2pdf from-directory --template [FILE] --directory [DIRECTORY] --output-dir [OUTPUT]
 ```
 
 ## Example
 
 ```bash
-$ .venv/bin/python yaml2pdf.py from-yaml --template yaml2pdf/samples/template/index.html --yaml-file yaml2pdf/samples/data/F21-00009.yaml --output-dir output
+python3 yaml2pdf -m from-yaml \
+  --template yaml2pdf/samples/template/index.html \
+  --yaml-file yaml2pdf/samples/data/F21-00009.yaml \
+  --output-dir output
 ```
 
 ```bash
-$ .venv/bin/python yaml2pdf.py from-directory --template yaml2pdf/samples/template/index.html --directory yaml2pdf/samples/data --output-dir output
+python3 -m yaml2pdf from-directory \
+  --template yaml2pdf/samples/template/index.html \
+  --directory yaml2pdf/samples/data \
+  --output-dir output
 ```
 
-## Create virtual environment
+## Create a virtual environment
 
 ```bash
 python3 -m venv .venv
-.venv/bin/python setup.py install
+.venv/bin/python3 setup.py install
 ```
 
 ## Run tests
 
 ```bash
-.venv/bin/python3 -m tests.test_make
+python3 -m tests.test_make
 ```
