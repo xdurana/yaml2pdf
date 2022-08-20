@@ -29,22 +29,6 @@ jobs:
         pip install flake8 black isort pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    - name: Run isort
-      run: isort .
-
-    - name: Run black
-      run: black .
-
-    - name: Commit changes
-      uses: EndBug/add-and-commit@v5
-      with:
-        author_name: autoblack
-        author_email: xdurana@users.noreply.github.com
-        message: "fixup: Format Python code with Black"
-        add: "."
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    # - name: Test with pytest
-    #   run: |
-    #     pytest
+    - name: Test with pytest
+      run: |
+        pytest
