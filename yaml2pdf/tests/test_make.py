@@ -1,7 +1,7 @@
 import os
 import unittest
 
-from make import make_document_from_directory, make_document_from_yaml
+from yaml2pdf.make import make_document_from_directory, make_document_from_yaml
 
 
 class TestYAML2PDF(unittest.TestCase):
